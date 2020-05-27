@@ -17,6 +17,10 @@ roslaunch realsense_gazebo_plugin depth_proc.launch
 ```
 No need to launch seperately. Already added to the simulation launch file in ```panda_simulation```
 
+## MoveIt! Rviz Setup
+
+Add PointCloud2 in Rviz and select topic as shown in image
+
 ![Point cloud in Rviz](images/depth_proc.png)
 
 
