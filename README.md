@@ -8,8 +8,7 @@ This package is used to obtain color and depth image and depth registered points
 
 ## Parts used for Panda Simulation
 
-Added the ```realsense-RS200.macro.xacro``` to ```panda_arm_hand.urdf.xacro``` file in ```franka_description```
-[realsense xacro](realsense_gazebo_plugin/blob/master/urdf/realsense-RS200.macro.xacro)
+Added the [Realsense xacro](realsense_gazebo_plugin/blob/master/urdf/realsense-RS200.macro.xacro) to ```panda_arm_hand.urdf.xacro``` in ```franka_description```
 
 Generated a point cloud from the depth image by running
 
