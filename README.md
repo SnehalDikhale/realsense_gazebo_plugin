@@ -17,6 +17,9 @@ roslaunch realsense_gazebo_plugin depth_proc.launch
 ```
 No need to launch seperately. Already added to the simulation launch file in ```panda_simulation```
 
+![Point cloud in Rviz](images/depth_proc)
+
+
 ## Save Point Cloud as OBJ file
 
 The point cloud data obtained from the camera can be saved as an .obj file by running 
