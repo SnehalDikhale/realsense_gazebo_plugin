@@ -6,11 +6,11 @@ Simulation of the Realsense R200 sensor in Gazebo.
 
 This package is used to obtain color and depth image and depth registered points from a RS200 camera attached to the wrist of a Franka Emika Panda Robot. 
 
-## Parts used for by Panda Simulation
+## Parts used for Panda Simulation
 
-rs200
+Added the [Realsense xacro] ( https://github.com/SnehalD14/realsense_gazebo_plugin/blob/master/urdf/realsense-RS200.macro.xacro ) to Panda urdf xacro file in ```franka_description```
 
-Point Cloud Demo can be obtained by running 
+Generated a point cloud from the depth image by running
 
 ```
 roslaunch realsense_gazebo_plugin depth_proc.launch
@@ -24,15 +24,6 @@ The point cloud data obtained from the camera can be saved as an .obj file by ru
 ```
 rosrun src/SavePointCloud.cpp
 ```
-
-## Run the point cloud demo
-
-Using [depth_image_proc](http://wiki.ros.org/depth_image_proc) package, we can generate a point cloud from the depth image by running
-
-```
-roslaunch realsense_gazebo_plugin depth_proc.launch
-```
-
 ## Acknowledgement
 
 This is a modified and updated version of the work done by[SyrianSpock](https://github.com/SyrianSpock/realsense_gazebo_plugin) 
