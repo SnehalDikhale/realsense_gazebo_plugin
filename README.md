@@ -1,58 +1,38 @@
-# Intel RealSense Gazebo ROS plugin and model
+# Intel RealSense ROS plugin for Gazebo and MoveIt!
 
-## _**Important note**_
+Simulation of the Realsense R200 sensor in Gazebo.
 
-**This branch only supports ROS Melodic with Gazebo 9.**
+## Use of Package 
 
-**To use this plugin with ROS Kinetic and Gazebo 7 you should use the [`kinetic-devel` branch](https://github.com/SyrianSpock/realsense_gazebo_plugin/tree/kinetic-devel).**
+This package is used to obtain color and depth image and depth registered points from a RS200 camera attached to the wrist of a Franka Emika Panda Robot. 
 
-## Quickstart
+## Parts used for by Panda Simulation
 
-Build the plugin
-```bash
-catkin build realsense_gazebo_plugin
+rs200
+
+Point Cloud Demo can be obtained by running 
+
 ```
-
-Test it by running
-```bash
-roslaunch realsense_gazebo_plugin realsense.launch
+roslaunch realsense_gazebo_plugin depth_proc.launch
 ```
+##### Disclaimer: Already added to the Simulation Launch file in ```panda_simulation```
 
-## Run the unittests
+## Save Point Cloud as OBJ file
 
-After building the plugin, you can run the unittests
-```bash
-rostest realsense_gazebo_plugin realsense_streams.test
+The point cloud data obtained from the camera can be saved as an .obj file by running 
+
+```
+rosrun src/SavePointCloud.cpp
 ```
 
 ## Run the point cloud demo
 
 Using [depth_image_proc](http://wiki.ros.org/depth_image_proc) package, we can generate a point cloud from the depth image by running
-```bash
-roslaunch realsense_gazebo_plugin realsense.launch # in terminal 1
-roslaunch realsense_gazebo_plugin depth_proc.launch # in terminal 2
+
 ```
-
-Then open Rviz, and display the `/realsense/camera/depth_registered/points` topic, you should see something like this
-![Point cloud in Rviz](doc/pointcloud.png)
-
-## Run from URDF
-
-```bash
-roslaunch realsense_gazebo_plugin realsense_urdf.launch
+roslaunch realsense_gazebo_plugin depth_proc.launch
 ```
-
-This will behave the same as `realsense.launch` mentioned above, with the difference that it spawns the model from a URDF (see `urdf` folder).
-You can reuse this to plug the sensor in the robot of your choice.
-
-## Dependencies
-
-This requires Gazebo 6 or higher and catkin tools for building.
-
-The package has been tested on ROS melodic on Ubuntu 18.04 with Gazebo 9.
 
 ## Acknowledgement
 
-This is continuation of work done by [guiccbr](https://github.com/guiccbr/) for Intel Corporation.
-
-Thanks to [Danfoa](https://github.com/Danfoa) for contributing the URDF integration.
+This is a modified and updated version of the work done by[SyrianSpock](https://github.com/SyrianSpock/realsense_gazebo_plugin) 
