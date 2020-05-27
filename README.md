@@ -19,7 +19,7 @@ No need to launch seperately. Already added to the simulation launch file in ```
 
 ## MoveIt! Rviz Setup
 
-Add PointCloud2 in Rviz and select topic as shown in image
+Add PointCloud2 in Rviz and select topic as shown in the image below
 
 ![Point cloud in Rviz](images/depth_proc.png)
 
