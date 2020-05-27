@@ -15,7 +15,7 @@ Generated a point cloud from the depth image by running
 ```
 roslaunch realsense_gazebo_plugin depth_proc.launch
 ```
-##### Disclaimer: Already added to the Simulation Launch file in ```panda_simulation```
+No need to launch seperately. Already added to the ```simulation.launch``` file in ```panda_simulation```
 
 ## Save Point Cloud as OBJ file
 
@@ -26,4 +26,4 @@ rosrun src/SavePointCloud.cpp
 ```
 ## Acknowledgement
 
-This is a modified and updated version of the work done by[SyrianSpock](https://github.com/SyrianSpock/realsense_gazebo_plugin) 
+This is a modified and updated version of the work done by [SyrianSpock](https://github.com/SyrianSpock/realsense_gazebo_plugin) 
